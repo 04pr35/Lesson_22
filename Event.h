@@ -18,7 +18,14 @@ public:
 	Time_ getTime();
 
 	virtual void show() = 0;
-	virtual string type() = 0;
+	virtual string type()const&;
 	virtual string toString() = 0;
+
+	bool operator == (const Event& obj)const&;
+	bool operator != (const Event& obj)const&;
+	bool operator > (const Event& obj)const&;
+	bool operator < (const Event& obj)const&;
+	bool operator >= (const Event& obj)const&;
+	bool operator <= (const Event& obj)const&;
 };
 
