@@ -18,5 +18,6 @@ public:
 
 	string toString();
 	void show();
+	string type();
 };
 

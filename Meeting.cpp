@@ -69,3 +69,8 @@ void Meeting::show()
 	cout << "Время: " << time << endl;
 	cout << "+======================+\n";
 }
+
+string Meeting::type()
+{
+	return "Meeting";;
+}
