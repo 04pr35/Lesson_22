@@ -2,14 +2,14 @@
 #include "Event.h"
 #include <string>
 #include <iostream>
-class BirthDay : public Event
+class BirthDay: public Event
 {
 	string hero;
 	string place;
 	int age;
 public:
 	BirthDay();
-	BirthDay(string hero, string place, int age);
+	BirthDay(Date d, Time_ t, string hero, string place, int age);
 	~BirthDay();
 
 	void setHero(string hero);

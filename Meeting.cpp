@@ -6,19 +6,21 @@ Meeting::Meeting()
 	place = "Bilya Krusty Krabs`a";
 }
 
-Meeting::Meeting(string person, string place)
+Meeting::Meeting(Date d, Time_ t, string person, string place)
+	:Event(d, t)
 {
 	if (person == "" || person == " " || person.empty())
 	{
-		throw "Быстро введи не пустую строку!";
+		throw "person empty!";
 	}
 	else if (place == "" || place == " " || place.empty())
 	{
-		throw "Быстро введи не пустую строку!";
+		throw "place empty!";
 	}
-	else
-	this->person = person;
-	this->place = place;
+	else {
+		this->person = person;
+		this->place = place;
+	}
 }
 
 Meeting::~Meeting(){}
@@ -63,10 +65,10 @@ string Meeting::toString()
 void Meeting::show()
 {
 	cout << "+======================+\n";
-	cout << "Персона: " << person<<endl;
-	cout << "Место: " << place << endl;
-	cout << "Дата: " << date << endl;
-	cout << "Время: " << time << endl;
+	cout << "person: " << person<<endl;
+	cout << "place: " << place << endl;
+	cout << "date: " << date << endl;
+	cout << "time: " << time << endl;
 	cout << "+======================+\n";
 }
 

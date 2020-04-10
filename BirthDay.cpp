@@ -9,7 +9,8 @@ BirthDay::BirthDay()
 	age = 0;
 }
 
-BirthDay::BirthDay(string hero, string place, int age)
+BirthDay::BirthDay(Date d, Time_ t, string hero, string place, int age)
+	:Event(d, t)
 {
 	this->hero = hero;
 	this->place = place;
@@ -70,5 +71,10 @@ string BirthDay::toString()
 
 void BirthDay::show()
 {
-	cout << this->toString() << endl;
+	cout << "+======================+\n";
+	cout << "hero: " << hero << endl;
+	cout << "place: " << place << endl;
+	cout << "date: " << date << endl;
+	cout << "time: " << time << endl;
+	cout << "+======================+\n";
 }

@@ -12,7 +12,7 @@ public:
 	
 
 	Custom();
-	Custom(string description);
+	Custom(Date d, Time_ t, string description);
 	~Custom();
 
 	void setDesc(string description);

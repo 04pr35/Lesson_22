@@ -7,10 +7,11 @@ Custom::Custom()
 	description = "Day1";
 }
 
-Custom::Custom(string description)
+Custom::Custom(Date d, Time_ t, string description)
+	:Event(d, t)
 {
 	if(description==" "|| description == ""|| description.empty()==true){
-		throw "Пустая строка для описания";
+		throw "description empty";
 	}else{
 	this->description = description;
 	}
@@ -37,8 +38,12 @@ string Custom::getDesc()
 }
 
 void Custom::show()
-{
+{	
+	cout << "+======================+\n";
 	cout << "Descrcription: " << description << endl;
+	cout << "date: " << date << endl;
+	cout << "time: " << time << endl;
+	cout << "+======================+\n";
 }
 
 string Custom::type()

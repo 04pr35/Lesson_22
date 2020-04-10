@@ -8,7 +8,7 @@ protected:
 	string place;
 public:
 	Meeting();
-	Meeting(string person,string place);
+	Meeting(Date d, Time_ t, string person,string place);
 	~Meeting();
 
 	void setPerson(string person);
